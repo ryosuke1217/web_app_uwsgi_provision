@@ -69,5 +69,7 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
+  config.vm.provision "file", source: "./config/nginx.conf", destination: "nginx.conf"
+  config.vm.provision "file", source: "./config/supervisor.conf", destination: "supervisor.conf"
   config.vm.provision :shell, :path => "./provision.sh", :privileged   => false
 end

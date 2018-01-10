@@ -23,3 +23,7 @@ pyenv install 3.5.3
 pyenv global 3.5.3
 
 pip install flask uwsgi
+
+rm /etc/nginx/conf.d/default.conf
+mv ~/nginx.conf /etc/nginx/conf.d/
+mv ~/supervisor.conf /etc/supervisor/conf.d/
