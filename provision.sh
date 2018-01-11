@@ -24,11 +24,13 @@ pyenv global 3.5.3
 
 pip install flask uwsgi
 
-rm /etc/nginx/conf.d/default.conf
+sudo rm /etc/nginx/conf.d/default.conf
 
-mv ~/nginx.conf /etc/nginx/conf.d/
-mv ~/supervisor.conf /etc/supervisor/conf.d/
+sudo mv ~/nginx.conf /etc/nginx/conf.d/
+sudo mv ~/supervisor.conf /etc/supervisor/conf.d/
 
-mkdir /var/www/
-sudo chmod -R vagrant:vagrant www
-git clone https://github.com/ryosuke1217/web_app_uwsgi.git
+sudo mkdir /var/www
+sudo chown -R vagrant:vagrant /var/www
+
+cd /var/www
+git clone https://ryosuke1217:kuuta326@github.com/ryosuke1217/web_app_uwsgi.git
