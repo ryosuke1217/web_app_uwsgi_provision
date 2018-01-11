@@ -1,6 +1,6 @@
 sudo apt-get update && sudo apt-get upgrade
 
-sudo apt-get -y install make gcc git python-dev python-pip libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl supervisor
+sudo apt-get -y install make gcc git python-dev python-pip libssl-dev build-essential zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev curl supervisor
 
 curl http://nginx.org/keys/nginx_signing.key | sudo apt-key add -
 
@@ -22,7 +22,7 @@ source ~/.bash_profile
 pyenv install 3.5.3
 pyenv global 3.5.3
 
-pip install flask uwsgi
+pip install flask uwsgi tensorflow
 
 sudo rm /etc/nginx/conf.d/default.conf
 
